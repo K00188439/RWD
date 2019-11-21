@@ -1,0 +1,111 @@
+/*#############################*/
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+	height:100%;
+	}
+#body{
+	
+	width: 100%;
+	background-color: blue;
+ background-image: url("../Tekstury/Background.jpg");
+}
+body{
+	width: 100%;
+	background-color:navy;
+ background-image: url("../Tekstury/Background.jpg");
+}
+
+
+header{
+	background-color:green;
+}
+logo{
+	background-color:black;
+	float:left;
+}
+baner{
+	background-color:white;
+	float:left;
+}
+login{
+	color: white;
+	float:right;
+}
+
+.clearfloat {
+	clear:both;
+	width:100%;
+}
+
+topbar{
+	background-color:saddlebrown;
+ background-image: url("../Tekstury/TopNavPlank.jpg");
+	text-align: center;
+	width:100%;
+	clear:both;
+}
+main{
+	/*background-color:red;*/
+}
+leftpanel{
+ background-image: url("../Tekstury/Metal.jpg");
+	color: gold;
+	width:20%;
+	background-color:slategrey;
+	float:left;
+	text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+wall{
+ background-image: url("../Tekstury/sciana.jpg");
+	border:3px solid black;
+	width:75%;
+	background-color:darkgrey;
+	float: left;
+}
+article{
+ background-image: url("../Tekstury/papier-brazowy-papirus_53876-14519.jpg");
+	border:1px solid black;
+	margin:2%;
+	padding:0 10px;
+	width:92%;
+	background-color:tan;
+	float: left;
+	color:#090356;
+}
+
+.Article{
+ background-image: url("../Tekstury/papier-brazowy-papirus_53876-14519.jpg");
+	border:1px solid black;
+	margin:2%;
+	padding:0 10px;
+	width:92%;
+	background-color:tan;
+	float: left;
+	color:#090356;
+}
+
+.Icon{
+	border:1px solid black;
+	margin:2%;
+	padding:0 10px;
+	width:30%;
+	height: 30%;
+	background-color:tan;
+	float: left;
+	color:#090356;
+}
+
+footer{
+	background-color: green;
+ background-image: url("../Tekstury/TopNavPlank.jpg");
+	height: 20%;
+	clear:both;
+}
+

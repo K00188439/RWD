@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="css/Css.css">
 <title>Independend Game Developers</title>
 </head>
-<div id="body">
 <body>
 	<header>
 	<logo>
@@ -14,54 +13,89 @@
 	  <baner>
 	  <img src="Tekstury/49806529366d35f7bf.jpg" alt="Insert Logo Here" name="Insert_logo" width="700" height="230" id="Insert_logo" style="background-color: #8090AB; display:block;" />
 		</baner>
-		
-	  <login>
-      <form>
+		<login>
+      <form action="" onSubmit="validation()">
   <label>Your Email</label>
-  <!-- `required` and `type="email"` does everything! -->
+  <!-- required and type="email" does everything! -->
   <input
-    required
     type="email"
-    name="email"
-    placeholder="a@b.com" />
-</form>
-<form>
+    name="email"\
+    id="email"/
+    placeholder="name@email.com"> <!-- required / placeholder="*****" -->
+<br>
   <label>Password</label>
   <input
-    required
     type="password"
     name="password"
-    placeholder="********" />
+    id="password"
+    placeholder="*****"/>
+  <input type="submit" value="Submit">
 </form>
-		Login | <a href="Legend of the First Ally.html">Register</a>
+<div id="eresult"></div>
+<script type="text/javascript">
+function validation(){
+	var email = document.getElementById('email').value;
+	var pass = document.getElementById('password').value;
+	
+	
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('email is required');
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('password is required');
+	}
+}
+
+var email = document.getElementById('email').value;
+var pass = document.getElementById('password').value;
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+
+</script>
+		Login | <a href="IndexR.html">Register</a>
 	  </login>
 	</header>
-	
-	<div class="clearfloat">
-		<br>
-		<topbar>
-		----------------------------------------------------
-|			<a href="Index.html">Legend of the First Ally</a> | 
-      <a href="All Article.html">All Articles</a> | 
-      <a href="Equipement.html">Equipement</a> |
-      <a href="Monsters.html">Monsters</a> | 
-      <a href="Buildings.html">Buildings</a> |
-      <a href="Spells.html">Spells</a> | 		  			         
-        ----------------------------------------------------
-		</topbar>
-	</div>
 	<main>
+	<div class="Clearfloat"></div>
+        
+		<div id="topbar">
+      <a href="index.html"><div class="topButton">Legend of the First Ally</div></a>
+      <a href="All Article.html"><div class="topButton">All Articles</div></a>
+      <a href="Equipement.html"><div class="topButton">Equipement</div></a>
+      <a href="Monsters.html"><div class="topButton">Monsters</div></a>
+      <a href="Buildings.html"><div class="topButton">Buildings</div></a>
+      <a href="Spells.html"><div class="topButton">Spells</div></a>
+		</div>
+
+	<div class="Clearfloat"></div>
 	<leftpanel>
 		<h2>Table of Content:</h2>
 		 <ul class="snav">
-      <li>Steel Equipement</li>
+      <li><h3><a href="Equipement.html#Equipement"><div class="leftButton">Steel Equipement</div></a></h3></li>
+      <li>Helmet</li>
+      <li>Armour</li>
+      <li>Pants</li>
+      <li>Greaves</li>
+      <br>
+      <li><h3><a href="Equipement.html#Tools"><div class="leftButton">Tools</div></a></h3></li>
+      <li>Hammer</li>
+      <li>Woodcutting axe</li>
+      <li>Pickaxe</li>
+      <li>Scimitar</li>
+      <br>
       <li>Adrian Lubański</li>
     </ul>
 		</leftpanel>
 	<wall>
 		<br>
 		<article>
-			<h2>Equpement</h2>
+			<h2><a name="Equipement"></a>Equipement</h2>
 		  <h3>Armour</h3>
 			In these tough times, when darkness are taking over all lands you deffinitely would like to wield proper Equipement for Deffenders of the lads of Life. Main source of Protection required for each soldier is a Steel Plate Armour.
           <img src="Tekstury/Equipement/SHP.png" alt="Insert Logo Here" name="Insert_logo" width=40% height=40% id="Insert_logo" style="background-color: #8090AB; display:block;" />Knight of heavy metal steel,<br>
@@ -76,9 +110,15 @@
         </article>
 		
 		<div class="Article">
-			<h1>Give me your shoees ;P</h1>
-			<p>You probbably cant wait till all the available eqipements going to be added.</p>
-            <h3>Comming soon</h3>
+			<h1><a name="Tools"></a>Tools</h1>
+            <h3>Hammer</h3>
+			<img src="Tekstury/Mlotek.png" alt="Insert Logo Here" name="Insert_logo" width=40% height=40% id="Insert_logo3" style="background-color: #8090AB; display:block;" />
+            <h3>Wood cutting Axe</h3>
+			<img src="Tekstury/Axe.png" alt="Insert Logo Here" name="Insert_logo" width=40% height=40% id="Insert_logo3" style="background-color: #8090AB; display:block;" />
+            <h3>Pickaxe</h3>
+			<img src="Tekstury/Kilof.png" alt="Insert Logo Here" name="Insert_logo" width=40% height=40% id="Insert_logo3" style="background-color: #8090AB; display:block;" />
+            <h3>Scimitar</h3>
+			<img src="Tekstury/Szabla.png" alt="Insert Logo Here" name="Insert_logo" width=40% height=40% id="Insert_logo3" style="background-color: #8090AB; display:block;" />
             <br>
 		</div>
 		</wall>
@@ -87,11 +127,14 @@
 	<footer>
 		email K00188439@student.lit.ie 
 		<img src="Tekstury/if_gmail_1220367.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
+        
+<a href="https://www.youtube.com/channel/UClMOnnWB0KHlhWagU3NiTMQ?view_as=subscriber" target="_blank"><img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.patreon.com/AlphaLionMale" target="_blank"><img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.twitch.tv/alphalionmale" target="_blank"><img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+	<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
 	</footer>
 </body>
-	</div>
 </html>

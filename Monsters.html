@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="css/Css.css">
 <title>Independend Game Developers</title>
 </head>
-<div id="body">
 <body>
 	<header>
 	<logo>
@@ -15,65 +14,91 @@
 	  <baner>
 	  <img src="Tekstury/49806529366d35f7bf.jpg" alt="Insert Logo Here" name="Insert_logo" width="700" height="230" id="Insert_logo" style="background-color: #8090AB; display:block;" />
 		</baner>
-		
-	  <login>
-      <form>
+		<login>
+      <form action="" onSubmit="validation()">
   <label>Your Email</label>
-  <!-- `required` and `type="email"` does everything! -->
+  <!-- required and type="email" does everything! -->
   <input
-    required
     type="email"
-    name="email"
-    placeholder="a@b.com" />
-</form>
-<form>
+    name="email"\
+    id="email"/
+    placeholder="name@email.com"> <!-- required / placeholder="*****" -->
+<br>
   <label>Password</label>
   <input
-    required
     type="password"
     name="password"
-    placeholder="********" />
+    id="password"
+    placeholder="*****"/>
+  <input type="submit" value="Submit">
 </form>
-		Login | <a href="Legend of the First Ally.html">Register</a>
+<div id="eresult"></div>
+<script type="text/javascript">
+function validation(){
+	var email = document.getElementById('email').value;
+	var pass = document.getElementById('password').value;
+	
+	
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('email is required');
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('password is required');
+	}
+}
+
+var email = document.getElementById('email').value;
+var pass = document.getElementById('password').value;
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+
+</script>
+		Login | <a href="IndexR.html">Register</a>
 	  </login>
 	</header>
-	
-	<div class="clearfloat">
-		<br>
-		<topbar>
-		----------------------------------------------------
-|			<a href="Index.html">Legend of the First Ally</a> | 
-      <a href="All Article.html">All Articles</a> | 
-      <a href="Equipement.html">Equipement</a> |
-      <a href="Monsters.html">Monsters</a> | 
-      <a href="Buildings.html">Buildings</a> |
-      <a href="Spells.html">Spells</a> | 		  			         
-        ----------------------------------------------------
-		</topbar>
-	</div>
 	<main>
+	<div class="Clearfloat"></div>
+        
+		<div id="topbar">
+      <a href="index.html"><div class="topButton">Legend of the First Ally</div></a>
+      <a href="All Article.html"><div class="topButton">All Articles</div></a>
+      <a href="Equipement.html"><div class="topButton">Equipement</div></a>
+      <a href="Monsters.html"><div class="topButton">Monsters</div></a>
+      <a href="Buildings.html"><div class="topButton">Buildings</div></a>
+      <a href="Spells.html"><div class="topButton">Spells</div></a>
+		</div>
+
+	<div class="Clearfloat"></div>
 	<leftpanel>
 		<h2>Table of Content:</h2>
 		<h3>Monsters</h3>
 		 <ul class="snav">
-      <li><h3>Force of Nature</h3></li>
+      <li><h3><a href="Monsters.html#ForceofNature"><div class="leftButton">Force of Nature</div></a></h3></li>
       <li>Elementals</li>
       <li>Mantis</li>
       <li>Sharkmans</li>
-      <li><h3>The good forces</h3></li>
+      <li><h3><a href="Monsters.html#TheGoodForces"><div class="leftButton">The good forces</div></a></h3></li>
       <li>Marine</li>
       <li>Marine in Steel</li>
       <li>Red Adamantium Marine</li>
-      <li><h3>Dark Forces</h3></li>
+      <li><h3><a href="Monsters.html#DarkForces"><div class="leftButton">Dark Forces</div></a></h3></li>
       <li>Mummy</li>
       <li>Skeletons</li>
+      <br>
+      <li>Adrian Lubański</li>
     </ul>
 		</leftpanel>
 	<wall>
 		<br>
 		<article>
 			<h1>Monsters</h1>
-			<h2>Forces of Nature</h2>
+			<h2><a name="ForceofNature"></a>Forces of Nature</h2>
 			<h3>Elementals</h3>
             <img src="Tekstury\Monsters\Elementale.png" alt="Insert Logo Here" name="Insert_logo" width=50% height=50% id="Insert_logo" style="background-color: #8090AB; display:block;" />
 			<h3>Mantis</h3>
@@ -85,7 +110,7 @@
 		</article>
 		
 		<div class="Article">
-			<h2>The good forces</h2>
+			<h2><a name="TheGoodForces"></a>The good forces</h2>
 			<h3>Marine</h3>
              <img src="Tekstury/Monsters/Przyklad Marine 1.png" alt="Insert Logo Here" name="Insert_logo" width=30% height=30% id="Insert_logo" style="background-color: #8090AB; display:block;" />
 			<h3>Marine equiped in steel armour</h3>
@@ -97,24 +122,27 @@
 		</div>
 		
 		<div class="Article">
-			<h2>Dark Forces</h2>
+			<h2><a name="DarkForces"></a>Dark Forces</h2>
 			<h3>Mummy</h3>
             <img src="Tekstury\Monsters\Kosciak.png" alt="Insert Logo Here" name="Insert_logo" width=50% height=50% id="Insert_logo" style="background-color: #8090AB; display:block;" />
 			<h3>Skeletons</h3>
             <img src="Tekstury\Monsters\Mumia.png" alt="Insert Logo Here" name="Insert_logo" width=50% height=50% id="Insert_logo" style="background-color: #8090AB; display:block;" />
             <br>
 		</div>
-		</wall>
+	  </wall>
 	</main>
 	<br>
 	<footer>
 		email K00188439@student.lit.ie 
 		<img src="Tekstury/if_gmail_1220367.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
+        
+<a href="https://www.youtube.com/channel/UClMOnnWB0KHlhWagU3NiTMQ?view_as=subscriber" target="_blank"><img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.patreon.com/AlphaLionMale" target="_blank"><img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.twitch.tv/alphalionmale" target="_blank"><img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+	<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
 	</footer>
 </body>
-	</div>
 </html>

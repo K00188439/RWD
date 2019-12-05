@@ -5,57 +5,83 @@
 <link rel="stylesheet" type="text/css" href="css/Css.css">
 <title>Independend Game Developers</title>
 </head>
-<div id="body">
 <body>
 	<header>
 	<logo>
 	  <img src="Tekstury/torus2.gif" alt="Insert Logo Here" name="Insert_logo" width="329" height="243" id="Insert_logo" style="background-color: #8090AB; display:block;" />	
 		</logo>
 		
-	  <baner>
-	  <img src="Tekstury/49806529366d35f7bf.jpg" alt="Insert Logo Here" name="Insert_logo" width="700" height="230" id="Insert_logo" style="background-color: #8090AB; display:block;" />
-		</baner>
-		
-	  <login>
-      <form>
+	  <baner><img src="Tekstury/49806529366d35f7bf.jpg" alt="Insert Logo Here" name="Insert_logo" width="700" height="230" id="Insert_Baner" style="background-color: #8090AB; display:block;" />
+	  </baner>
+	<login>
+      <form action="" onSubmit="validation()">
   <label>Your Email</label>
-  <!-- `required` and `type="email"` does everything! -->
+  <!-- required and type="email" does everything! -->
   <input
-    required
     type="email"
-    name="email"
-    placeholder="a@b.com" />
-</form>
-<form>
+    name="email"\
+    id="email"/
+    placeholder="name@email.com"> <!-- required / placeholder="*****" -->
+<br>
   <label>Password</label>
   <input
-    required
     type="password"
     name="password"
-    placeholder="********" />
+    id="password"
+    placeholder="*****"/>
+  <input type="submit" value="Submit">
 </form>
-		Login | <a href="Legend of the First Ally.html">Register</a>
+<div id="eresult"></div>
+<script type="text/javascript">
+function validation(){
+	var email = document.getElementById('email').value;
+	var pass = document.getElementById('password').value;
+	
+	
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('email is required');
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('password is required');
+	}
+}
+
+var email = document.getElementById('email').value;
+var pass = document.getElementById('password').value;
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	}
+
+</script>
+		Login | <a href="IndexR.html">Register</a>
 	  </login>
 	</header>
-	
-	<div class="clearfloat">
-		<br>
-		<topbar>
-		----------------------------------------------------
-|			<a href="Index.html">Legend of the First Ally</a> | 
-      <a href="All Article.html">All Articles</a> | 
-      <a href="Equipement.html">Equipement</a> |
-      <a href="Monsters.html">Monsters</a> | 
-      <a href="Buildings.html">Buildings</a> |
-      <a href="Spells.html">Spells</a> | 	  			         
-        ----------------------------------------------------
-		</topbar>
-	</div>
 	<main>
+	<div class="Clearfloat"></div>
+        
+		<div id="topbar">
+      <a href="index.html"><div class="topButton">Legend of the First Ally</div></a>
+      <a href="All Article.html"><div class="topButton">All Articles</div></a>
+      <a href="Equipement.html"><div class="topButton">Equipement</div></a>
+      <a href="Monsters.html"><div class="topButton">Monsters</div></a>
+      <a href="Buildings.html"><div class="topButton">Buildings</div></a>
+      <a href="Spells.html"><div class="topButton">Spells</div></a>
+		</div>
+
+	<div class="Clearfloat"></div>
 	<leftpanel>
 		<h2>Table of Content:</h2>
 		 <ul class="snav">
-      <li><a href="Index.html">Legend of the First Ally</a></li>
+      <li><a href="index.html"><div class="leftButton">Legend of the First Ally</div></a></li>
+      <li><a href="index.html#Introduction"><div class="leftButton">Introduction</div></a></li>
+      <li><a href="index.html#Expansion"><div class="leftButton">Expansion</div></a></li>
+      <li><a href="index.html#Ending"><div class="leftButton">Ending</div></a></li>
+      <br>
       <li>Adrian Lubański</li>
     </ul>
 		</leftpanel>
@@ -64,15 +90,15 @@
 		<article>
 			<h1>Legend of the First Ally</h1>
             <img src="Tekstury/TygrysInTropics.png" alt="Insert Logo Here" name="Insert_logo" width=93% height=93% id="Insert_logo" style="background-color: #8090AB; display:block;" />
-			<h3>Introduction</h3>
+			<h3><a name="Introduction"></a>Introduction</h3>
 			Legend of the first ally is not yet developped plan for a new TowerDeffence-Moba, Strategy with hint of RPG it brings you into lands from the family of Lord of The Rings and Dungeons & Dragons.<br>
 			From the very beggining of Universe where two Dragons, the white Dragon of Creation and black Dragon of Destruction have battled constantly.<br>Land of humans, Elves and Dwarves have been split into good and evil, after Great Arch-Mage got cought practicing necromancy, he have been sentanced to death, right before he got killed he cast on himself powerfull dark spell that activated after his death, all the races that were at ceremony got cursed and turned into Orc's, Goblins and Trolls.
             <img src="Tekstury/DragonSlayer.png" alt="Insert Logo Here" name="Insert_logo" width=93% height=93% id="Insert_logo" style="background-color: #8090AB; display:block;" />
-			<h3>Expansion</h3>
+			<h3><a name="Expansion"></a>Expansion</h3>
 			Nobody expected that he had apprentenship that short after tryed to replikate the curse, and years later when he passed out, he awoke the curse and plaggued already cursed races into Undead's.
 			Dark times came, Dwarves and even fearless Draws the dark elves start to escape from underworld, their home land, they were repealed by waves of skeleton's and zombies outnumbered in thousands.
             <img src="Tekstury/TwoDragons.png" alt="Insert Logo Here" name="Insert_logo" width=93% height=93% id="Insert_logo" style="background-color: #8090AB; display:block;" />
-			<h3>Sea Shores gold rubbing pirates from Far Isles. The Grands Continent and still stilling. rubbers of gold have've been swimming ;]</h3>
+			<h3><a name="Sea_Shores"></a><h3>Ending</h3></h3>
 			 In these hard times all Races got to unite, and stand together against forces of evil. This might even reqire uniting with half desised Orc's and Trolls
              <img src="Tekstury/Port.png" alt="Insert Logo Here" name="Insert_logo" width=93% height=93% id="Insert_logo" style="background-color: #8090AB; display:block;" />
             <br><br>Adrian Lubanski
@@ -82,9 +108,10 @@
 		<div class="Article">
 			<h1>Story Line</h1>
             The history is only unfolding.
-			All the Kingdoms seek for heroes that will lead the dangerous campains to clear the world of leaving from evil.
+			All the Kingdoms seek for heroes that will lead the dangerous campains to clear the world of living from evil.
 			<h3>To be continue...</h3>
             <br>
+            <a href="index.html">Legend of the First Ally</a>
 		</div>
 		</wall>
 	</main>
@@ -92,11 +119,14 @@
 	<footer>
 		email K00188439@student.lit.ie 
 		<img src="Tekstury/if_gmail_1220367.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
-		<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
+        
+<a href="https://www.youtube.com/channel/UClMOnnWB0KHlhWagU3NiTMQ?view_as=subscriber" target="_blank"><img src="Tekstury/if_youtube_v2_386762.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.patreon.com/AlphaLionMale" target="_blank"><img src="Tekstury/if_patreon_2041304.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+<a href="https://www.twitch.tv/alphalionmale" target="_blank"><img src="Tekstury/if_twitch_1701603.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" /></a>
+
+	<img src="Tekstury/if_deviantart_2238319.png" alt="Insert Logo Here" name="Insert_logo" id="Insert_logo" style="background-color: #8A5D0A; display:block; float:left;" />
 	</footer>
 </body>
-	</div>
 </html>

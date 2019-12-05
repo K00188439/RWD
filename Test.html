@@ -1,0 +1,52 @@
+<html>
+<body>
+<login>
+      <form action="" onSubmit="validation()">
+  <label>Your Email</label>
+  <!-- required and type="email" does everything! -->
+  <input
+    type="email"
+    name="email"\
+    id="email"/
+    placeholder="name@email.com"> <!-- required / placeholder="*****" -->
+<br>
+  <label>Password</label>
+  <input
+    type="password"
+    name="password"
+    id="password"
+    placeholder="*****"/>
+  <input type="submit" value="Submit">
+</form>
+<div id="eresult"></div>
+<script type="text/javascript">
+function validation(){
+	var email = document.getElementById('email').value;
+	var pass = document.getElementById('password').value;
+	
+	
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('email is required');
+	}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+		alert('password is required');
+	}
+}
+
+var email = document.getElementById('email').value;
+var pass = document.getElementById('password').value;
+	if (email==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	} else {document.getElementById('eresult').innerHTML = "a";}
+	if (pass==''){ 
+		document.getElementById('eresult').innerHTML = "<p style='color: red;'>All fields required</p>";
+	} else {document.getElementById('eresult').innerHTML = "a";}
+
+</script>
+		Login | <a href="IndexR.html">Register</a>
+	  </login>
+	  
+	  </body>
+	  </html>

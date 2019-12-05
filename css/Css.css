@@ -5,20 +5,11 @@
 html{
 	height:100%;
 	}
-#body{
-	
-	width: 100%;
-	background-color: blue;
- background-image: url("../Tekstury/Background.jpg");
- 
-}
 body{
 	width: 100%;
 	background-color:navy;
  background-image: url("../Tekstury/Background.jpg");
- color: green;
 }
-
 
 header{
 	background-color:green;
@@ -36,20 +27,27 @@ login{
 	float:right;
 }
 
-.clearfloat {
+.Clearfloat {
 	clear:both;
 	width:100%;
 }
 
-topbar{
-	background-color:saddlebrown;
- background-image: url("../Tekstury/TopNavPlank.jpg");
-	text-align: center;
+.FloatLeft {
+	float:left;
+	width:30%;
+}
+
+#topbar{
+	background-color: saddlebrown;
+	background-image: url(../Tekstury/TopNavPlank.jpg);
+	/*float:left;*/
 	width:100%;
-	clear:both;
+	height: 30px;
+	text-align:center;
 }
 main{
 	/*background-color:red;*/
+	width:100%;
 }
 leftpanel{
  background-image: url("../Tekstury/Metal.jpg");
@@ -93,21 +91,27 @@ article{
 	color:#090356;
 }
 
-.Icon{
-	border:1px solid black;
-	margin:2%;
-	padding:0 10px;
-	width:30%;
-	height: 30%;
-	background-color:tan;
+.topButton{
+ background-image: url("../Tekstury/Skora.png");
 	float: left;
-	color:#090356;
+ margin-top:5px;
+ margin-left:9%;
+ padding-left:20px;
+ padding-right:20px;
+}
+
+.leftButton{
+ background-image: url("../Tekstury/MetalPlate.jpg");
+ background-size:  100% 100%;
 }
 
 footer{
 	background-color: green;
  background-image: url("../Tekstury/TopNavPlank.jpg");
-	height: 20%;
+	height: 30px;
 	clear:both;
 }
 
+a {
+  color: White;
+}
